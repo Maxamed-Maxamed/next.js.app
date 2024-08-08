@@ -1,30 +1,24 @@
-// Import React and motion from framer-motion for animations
 import React from "react";
 import { motion } from "framer-motion";
 
-// Define the Hero component as a functional component
+
 const Hero = () => {
-    return (
-        // Use motion.div for animated container
-        <motion.div
-            // Set initial opacity to 0 (invisible)
-            initial={{ opacity: 0 }}
-            // Animate to full opacity (visible)
-            animate={{ opacity: 1 }}
-            // Set animation duration to 0.5 seconds
-            transition={{ duration: 0.5 }}
-            // Apply CSS class for styling
-            className="hero-container"
-        >
-            {/* Main heading */}
-            <h1>Welcome to our Hairstyling Boutique</h1>
-            {/* Subheading or description */}
-            <p>Discover the latest trends and styles in hairstyling.</p>
-            {/* Call-to-action button */}
-            <button>Book an Appointment</button>
-        </motion.div>
-    );
+  return (
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.5 }}
+      className="hero-container"
+    >
+        {/* Add your hero content here */} 
+        <div className="container mx-auto px-4 text-center">
+
+      <h1>Welcome to our Hairstyling Boutique</h1>
+      <p>Discover the latest trends and styles in hairstyling.</p>
+      <button type="button" className="text-white   bg-blue-800  hover:decoration-blue-600 focus:ring-inherit  px-2.5 me2.5 mb-2 dark:bg-blue-300 dark:hover:border-e-orange-950 focus:outline-none dark:ring-blue-200"             >Book an Appointment</button>
+    </div>
+    </motion.div>
+  );
 };
 
-// Export the Hero component for use in other parts of the application
 export default Hero;
